@@ -2,7 +2,7 @@
 This project provides business-related services for Rasa.
 
 # Spring Boot、Gradle、Docker
-Spring Boot、Gradle、Docker
+Spring Boot、Gradle、Docker、Detekt、Jacoco(plugin)
 
 # Build with Docker
 1. build:
