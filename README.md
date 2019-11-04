@@ -11,9 +11,9 @@ Spring Boot、Gradle、Docker、Detekt、Jacoco(plugin)
     ```
 1. build Docker image:
     ```shell script
-    docker build -t actionservice .
+    docker build -t aj/latvia .
     ```       
 1. run Docker image:
     ```shell script
-    docker run -p 8080:8080 -t actionservice
+    docker run -p 8088:8088 -t aj/latvia
     ```
