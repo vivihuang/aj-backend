@@ -15,5 +15,5 @@ Spring Boot、Gradle、Docker、Detekt、Jacoco(plugin)
     ```       
 1. run Docker image:
     ```shell script
-    docker run -p 8088:8088 -t aj/latvia
+    docker run -p 8088:8080 -t aj/latvia
     ```

@@ -4,5 +4,5 @@ VOLUME /tmp
 ARG JAVA_OPTS
 ENV JAVA_OPTS=$JAVA_OPTS
 ADD build/libs/latvia*.jar latvia.jar
-EXPOSE 8088
+EXPOSE 8080
 CMD ["java", "-jar", "latvia.jar"]
