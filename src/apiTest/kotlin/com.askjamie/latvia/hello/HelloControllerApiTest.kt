@@ -14,10 +14,9 @@ internal class HelloControllerApiTest(@Autowired private val mockMvc: MockMvc) {
     @Test
     fun `should return hello msg when request hello given a name`() {
         mockMvc.perform(
-            get("/hello")
-                .param("name", "Latvia")
+                get("/hello").param("name", "Latvia")
         )
-            .andExpect(status().isOk)
-            .andExpect(content().string("hello, Latvia!"))
+                .andExpect(status().isOk)
+                .andExpect(content().string("hello, Latvia!"))
     }
 }
