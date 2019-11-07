@@ -1,5 +1,6 @@
 package com.askjamie.latvia.course
 
+import fixture.CourseFixture
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
@@ -20,17 +21,15 @@ internal class CourseServiceTest {
 
     @Test
     fun `should call repository when search courses given a subcategory`() {
-        val subCategory = "coffee"
-        val courses = listOf(
-                Course("coffee", "https://onepa.com/courses?subCategory=coffee", "coffee")
-        )
-        every { courseRepository.search(subCategory) } returns courses
+        val subcategory = "coffee"
+        val courses = listOf(CourseFixture.sample)
+        every { courseRepository.search(subcategory) } returns courses
 
-        val result = courseService.search(subCategory)
+        val result = courseService.search(subcategory)
 
         assertEquals(courses, result)
         verify(exactly = 1) {
-            courseRepository.search(subCategory)
+            courseRepository.search(subcategory)
         }
     }
 }
