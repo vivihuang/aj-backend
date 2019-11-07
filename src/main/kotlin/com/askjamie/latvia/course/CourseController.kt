@@ -9,7 +9,5 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("api/course")
 class CourseController(private val courseService: CourseService) {
     @GetMapping
-    fun get(@RequestParam(value = "subCategory") subCategory: String): List<Course> {
-        return courseService.search(subCategory)
-    }
+    fun get(@RequestParam subCategory: String) = courseService.search(subCategory)
 }
