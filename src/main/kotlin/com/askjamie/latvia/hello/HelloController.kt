@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class HelloController(private val environment: Environment) {
 
-    @Value("\${image.version}")
+    @Value("\${image.version:development}")
     private lateinit var imageVersion: String
 
     @GetMapping("/hello")
